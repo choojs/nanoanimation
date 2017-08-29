@@ -1,0 +1,25 @@
+{
+  "name": "nanoanimation",
+  "description": "Safety wrapper around the Web Animation API",
+  "repository": "yoshuawuyts/nanoanimation",
+  "version": "1.0.0",
+  "scripts": {
+    "deps": "dependency-check . && dependency-check . --extra --no-dev",
+    "start": "node .",
+    "test": "standard && npm run deps"
+  },
+  "dependencies": {
+    "nanoassert": "^1.1.0"
+  },
+  "devDependencies": {
+    "dependency-check": "^2.9.1",
+    "standard": "^10.0.3",
+    "tape": "^4.8.0"
+  },
+  "keywords": [
+    "animate",
+    "web",
+    "nano"
+  ],
+  "license": "MIT"
+}
