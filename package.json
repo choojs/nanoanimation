@@ -2,7 +2,7 @@
   "name": "nanoanimation",
   "description": "Safety wrapper around the Web Animation API",
   "repository": "yoshuawuyts/nanoanimation",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "scripts": {
     "deps": "dependency-check . && dependency-check . --extra --no-dev",
     "start": "node .",
