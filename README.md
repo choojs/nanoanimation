@@ -8,7 +8,7 @@ behavior is to do nothing.
 
 ## Usage
 ```js
-var animate = require('nanoanimation')
+var animation = require('nanoanimation')
 var css = require('sheetify')
 var html = require('bel')
 
@@ -30,13 +30,20 @@ var timingProperties = {
   fill: 'forwards'
 }
 
-var animation = animate(el, keyFrames, timingProperties)
-document.body.appendChild(el)
-
-animation.onfinish = function () {
+var animate = animation(keyFrames, timingProperties)
+animate(el, function () {
   console.log('event ended')
-}
+})
+document.body.appendChild(el)
 ```
+
+## API
+### `animate = animation(keyFrames, timingProperties)`
+Create a new animation.
+
+### `WebAnimation = animate(el, [done])`
+Apply an animation to an element, calls `done` when finished. Returns the
+nativate Web Animation object.
 
 ## See Also
 - [Using the Web Animations API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API/Using_the_Web_Animations_API)
