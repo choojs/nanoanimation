@@ -24,11 +24,7 @@ function animate (keyframes, timingProperties) {
       return placeholder
     }
 
-    // Element.animate plays by default. The new Animation constructor doesn't,
-    // but is much less widely supported. By pausing the animation, we can
-    // pretend we're using the newer API, and leave more control up to authors.
     var animation = element.animate(keyframes, timingProperties)
-    animation.pause()
     animation.onfinish = done || noop
     return animation
   }
