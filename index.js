@@ -29,6 +29,7 @@ function animate (keyframes, timingProperties) {
 
     var animation = element.animate(keyframes, timingProperties)
     animation.onfinish = done
+    animation.oncancel = done
     return animation
   }
 }
