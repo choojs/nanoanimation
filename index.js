@@ -14,8 +14,8 @@ var placeholder = {
 module.exports = animate
 
 function animate (keyframes, timingProperties) {
-  assert.ok(Array.isArray(keyframes), 'nanoanimation: keyframes should be an array')
-  assert.equal(typeof timingProperties, 'object', 'nanoanimation: timingProperties should be type object')
+  assert.equal(typeof timingProperties, 'object', 'nanoanimation: keyframes should be an array or an object')
+  assert.ok(typeof timingProperties === 'object' || typeof timingProperties === 'number', 'nanoanimation: timingProperties should be type object or number')
 
   return function (element, _done) {
     var done = _done || noop
