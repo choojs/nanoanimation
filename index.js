@@ -28,6 +28,7 @@ function animate (keyframes, timingProperties) {
     }
 
     var animation = element.animate(keyframes, timingProperties)
+    animation.pause()
     animation.onfinish = done
     return animation
   }
