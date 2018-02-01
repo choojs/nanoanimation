@@ -15,7 +15,7 @@ var html = require('bel')
 css('tachyons')
 
 var el = html`
-  <div class="bg-red h5 w5" onclick=${() => animation.play()}>
+  <div class="bg-red h5 w5" onclick=${() => move.play()}>
     Hello planet
   </div>
 `
@@ -31,7 +31,7 @@ var timingProperties = {
 }
 
 var animate = animation(keyFrames, timingProperties)
-animate(el, function () {
+var move = animate(el, function () {
   console.log('event ended')
 })
 document.body.appendChild(el)
