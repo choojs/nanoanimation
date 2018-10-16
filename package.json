@@ -3,6 +3,8 @@
   "description": "Safety wrapper around the Web Animation API",
   "repository": "choojs/nanoanimation",
   "version": "2.1.0",
+  "main": "index.js",
+  "module": "index.es.js",
   "scripts": {
     "deps": "dependency-check . && dependency-check . --extra --no-dev",
     "start": "node .",
