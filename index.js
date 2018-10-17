@@ -1,4 +1,4 @@
-var assert = require('nanoassert')
+import assert from 'nanoassert'
 
 var placeholder = {
   cancel: noop,
@@ -11,9 +11,7 @@ var placeholder = {
   }
 }
 
-module.exports = animate
-
-function animate (keyframes, timingProperties) {
+export default function animate (keyframes, timingProperties) {
   assert.equal(typeof keyframes, 'object', 'nanoanimation: keyframes should be an array or an object')
   assert.ok(typeof timingProperties === 'object' || typeof timingProperties === 'number', 'nanoanimation: timingProperties should be type object or number')
 
