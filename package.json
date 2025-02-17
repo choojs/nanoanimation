@@ -3,9 +3,15 @@
   "description": "Safety wrapper around the Web Animation API",
   "repository": "choojs/nanoanimation",
   "version": "2.1.0",
+  "source": "index.js",
+  "main": "dist/nanoanimation.js",
+  "module": "dist/nanoanimation.mjs",
   "scripts": {
     "deps": "dependency-check . && dependency-check . --extra --no-dev",
     "start": "node .",
+    "build": "microbundle -o dist -f cjs,es",
+    "prepublishOnly": "npm run build",
+    "pretest": "npm run build",
     "test": "standard && npm run deps"
   },
   "dependencies": {
@@ -13,6 +19,7 @@
   },
   "devDependencies": {
     "dependency-check": "^2.9.1",
+    "microbundle": "^0.6.0",
     "standard": "^10.0.3",
     "tape": "^4.8.0"
   },
